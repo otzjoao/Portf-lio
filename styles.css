@@ -42,7 +42,7 @@ body {
     background-color: #8ba9d1;
 
     /* Adiciona a imagem de textura e a faz repetir */
-    background-image: url('assets/granulity.png');
+    background-image: url('granulity.png');
     background-repeat: cover;
 
     /* Para que a textura cubra toda a tela, sem esticar */
@@ -202,3 +202,4 @@ a:hover {
     width: 130px;
   }
 }
+
