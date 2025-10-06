@@ -1,80 +1,23 @@
+/* General Body Styles */
 body {
-    font-family: Arial, sans-serif; /* Define o tipo de letra */
-    background-color: #6aadca; /* A cor de fundo da página */
-    color: #0b4f6c; /* A cor do texto padrão */
-    margin: 0; /* Remove as margens em volta da página */
-    padding: 0; /* Remove os espaços internos */
-}
-
-header {
-    background-color: #333; /* Cor de fundo do cabeçalho */
-    color: #1e2a35; /* Cor do texto no cabeçalho */
-    padding: 20px; /* Adiciona espaço interno */
-    text-align: center; /* Alinha o texto no centro */
-}
-
-section {
-  margin-top: 40px; /* ou qualquer valor que fique visualmente agradável */
-}
-
-
-section {
-    padding: 20px; /* Adiciona espaço interno em cada seção */
-    margin-bottom: 20px; /* Adiciona um espaço abaixo de cada seção */
-}
-
-a {
-    color: #333; /* Cor dos links */
-}
-
-.contato-icones a {
-    margin-right: 15px; /* Espaçamento entre os ícones */
-    color: #333; /* Cor dos ícones, você pode mudar */
-    text-decoration: none; /* Remove o sublinhado dos links */
-}
-
-.contato-icones a:hover {
-    color: #007bff; /* Mude a cor ao passar o mouse */
-}
-
-body {
-    /* Define a cor de fundo azul claro */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #0b4f6c;
+    margin: 0;
+    padding: 0;
     background-color: #8ba9d1;
-
-    /* Adiciona a imagem de textura e a faz repetir */
     background-image: url('granulity.png');
-    background-repeat: cover;
-
-    /* Para que a textura cubra toda a tela, sem esticar */
-    background-size: 150px; /* Você pode ajustar o tamanho para controlar o nível de detalhe */
+    background-repeat: repeat; /* Valor corrigido de 'cover' para 'repeat' */
+    background-size: 150px;
 }
 
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.9);
-  border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-section {
-  background-color: rgba(255,255,255,0.8);
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-}
+/* Typography */
 h1, h2 {
   font-weight: 600;
   color: #0b4f6c;
 }
 
+/* Header */
 header {
   background: linear-gradient(135deg, #0b4f6c, #6aadca);
   color: white;
@@ -84,68 +27,53 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-a {
-  background-color: #0b4f6c;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
+/* Sections */
+section {
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-a:hover {
-  background-color: #083d56;
-  transform: translateY(-2px);
-}
-
-@media (max-width: 600px) {
-  header {
-    padding: 30px 10px;
-  }
-  section {
-    padding: 15px;
-  }
-}
-
-.projetos-links {
+/* Shared styles for project and contact links */
+.projetos-links,
+.contato-links {
     display: flex;
-    justify-content: center;   /* Centraliza o botão */
-    flex-wrap: wrap;           /* Mantém responsivo */
-    gap: 15px;                 /* Espaçamento (caso adicione mais projetos) */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-top: 20px;
 }
 
-.projetos-links a img {
+/* Resetting link styles for image-based links */
+.projetos-links a,
+.contato-links a {
+    background-color: transparent;
+    padding: 0;
+}
+
+.projetos-links a img,
+.contato-links a img {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.projetos-links a img:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-}
-
-.projetos-links a img:hover {
+.projetos-links a img:hover,
+.contato-links a img:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 6px 14px rgba(0,0,0,0.3);
 }
 
-@media (max-width: 600px) {
-  .projetos-links {
-    gap: 10px;
-  }
-  .projetos-links a img {
-    width: 130px;
-  }
-}
-
+/* Skills Section */
 .habilidades-icones {
     display: flex;
-    justify-content: center; /* Centraliza na horizontal */
+    justify-content: center;
     align-items: center;
-    gap: 25px;                /* Espaço entre os ícones */
-    flex-wrap: wrap;          /* Responsivo em telas menores */
+    gap: 25px;
+    flex-wrap: wrap;
     margin-top: 25px;
 }
 
@@ -160,46 +88,30 @@ a:hover {
     transform: translateY(-5px) scale(1.1);
     filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.3));
 }
+
+/* Responsive Media Queries */
 @media (max-width: 600px) {
-  .habilidades-icones {
-    gap: 10px;
+  header {
+    padding: 30px 10px;
   }
-  .habilidades-icones img {
-    width: 130px;
+
+  section {
+    padding: 15px;
   }
-}
 
-
-.contato-links {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    flex-wrap: wrap; /* Quebra linha se tiver muitos botões */
-    gap: 15px; /* Espaçamento entre os botões */
-    margin-top: 20px;
-}
-
-.contato-links a img {
-    border-radius: 8px; /* Deixa as bordas suaves */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contato-links a img:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-
-.contato-links a img:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-}
-
-@media (max-width: 600px) {
+  .projetos-links,
   .contato-links {
     gap: 10px;
   }
-  .contato-links a img {
+
+  .projetos-links a img,
+  .contato-links a img,
+  .habilidades-icones img {
     width: 130px;
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .habilidades-icones {
+      gap: 15px;
   }
 }
-
